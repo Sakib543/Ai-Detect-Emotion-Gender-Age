@@ -76,14 +76,30 @@ const WebcamEmotion = () => {
     }, [modelsLoaded]);
 
     return (
-        <div className='w-full max-w-screen p-6 bg-white rounded-lg shadow-lg border border-gray-200'>
-            <h2 className='text-2xl font-semibold mb-6 text-center text-gray-800'>Live Emotion, Age & Gender Detection</h2>
-            <div className='flex justify-center relative mb-4'>
-                <video ref={videoRef} autoPlay muted onPlay={handleVideoPlay} width="1024" height="700" className='rounded-md shadow-md' />
-                <canvas ref={canvasRef} className="absolute top-0 left-0" />
-            </div>
-            {!modelsLoaded && <p className='text-center text-gray-600'>please wait...</p>}
-        </div>
+    <div className="w-full max-w-7xl mx-auto p-4 sm:p-6 bg-white rounded-lg shadow-lg border border-gray-200">
+  <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-center text-gray-800">
+    Live Emotion, Age & Gender Detection
+  </h2>
+
+  <div className="relative w-full aspect-video mb-4">
+    <video
+      ref={videoRef}
+      autoPlay
+      muted
+      onPlay={handleVideoPlay}
+      className="absolute top-0 left-0 w-full h-full object-cover rounded-md shadow-md"
+    />
+    <canvas
+      ref={canvasRef}
+      className="absolute top-0 left-0 w-full h-full"
+    />
+  </div>
+
+  {!modelsLoaded && (
+    <p className="text-center text-gray-600">Please wait...</p>
+  )}
+</div>
+
     );
 };
 
