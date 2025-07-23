@@ -30,8 +30,7 @@ Follow these steps to get the project up and running on your local machine.
 If you haven't already, clone the project repository:
 
 ```bash
-git clone <your-repository-url>
-cd ai-emotion
+git clone [https://github.com/Sakib543/Ai-Detect-Emotion-Gender-Age]
 ```
 
 ### 2. Install Dependencies
@@ -90,7 +89,3 @@ The application will typically be accessible at `http://localhost:3000` in your 
 ## Contributing
 
 Feel free to fork this repository and contribute to its development.
-
-## License
-
-[Specify your project's license here, e.g., MIT License]
